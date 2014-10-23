@@ -1,0 +1,37 @@
+#include "MyRobot.h"
+
+void RobotDemo::RobotInit(){
+	flTalon = new Talon(1);
+	frTalon = new Talon(2);
+	blTalon = new Talon(3);
+	brTalon = new Talon(4);
+	balance = new Gyro(1);
+	wheels = new RobotDrive(flTalon, blTalon, frTalon, brTalon);
+	stick = new Joystick(1);
+}
+void RobotDemo::DisabledInit(){
+	
+}
+void RobotDemo::DisabledPeriodic(){
+	
+}
+void RobotDemo::AutonomousInit(){
+	
+}
+void RobotDemo::AutonomousPeriodic(){
+	
+}
+void RobotDemo::TeleopInit(){
+	
+}
+void RobotDemo::TeleopPeriodic(){
+	
+	wheels->MecanumDrive_Cartesian(stick->GetX(), stick->GetY(), stick->GetZ(), balance->GetAngle());
+	//use switch for buttons, read up on listeners
+}
+void RobotDemo::TestInit(){
+	
+}
+void RobotDemo::TestPeriodic(){
+	
+}

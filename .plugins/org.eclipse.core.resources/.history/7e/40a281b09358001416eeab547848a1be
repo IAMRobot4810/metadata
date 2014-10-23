@@ -1,0 +1,8 @@
+#include "WPILib.h"
+
+
+class RobotDemo : public IterativeTemplate{
+public:
+private:
+protected:
+};

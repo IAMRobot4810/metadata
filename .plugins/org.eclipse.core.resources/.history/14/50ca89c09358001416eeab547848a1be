@@ -1,0 +1,27 @@
+#include "WPILib.h"
+
+
+class RobotDemo : public IterativeTemplate{
+	
+	RobotDemo(){
+		
+	}
+	
+	~RobotDemo(){
+		
+	}
+	
+public:
+	
+	Talon *flTalon;
+	Talon *frTalon;
+	Talon *blTalon;
+	Talon *brTalon;
+	RobotDrive *myRobot;
+	Joystick *stick;
+	
+private:
+protected:
+};
+
+START_ROBOT_CLASS(ROBOTDEMO);

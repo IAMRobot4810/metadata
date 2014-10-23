@@ -1,0 +1,33 @@
+#include "MyRobot.h"
+
+void RobotDemo::RobotInit(){
+	flTalon = new Talon(1);
+	frTalon = new Talon(2);
+	blTalon = new Talon(3);
+	brTalon = new Talon(4);
+	wheels = new RobotDrive(flTalon, blTalon, frTalon, brTalon);
+}
+void RobotDemo::DisabledInit(){
+	
+}
+void RobotDemo::DisabledPeriodic(){
+	
+}
+void RobotDemo::AutonomousInit(){
+	
+}
+void RobotDemo::AutonomousPeriodic(){
+	
+}
+void RobotDemo::TeleopInit(){
+	
+}
+void RobotDemo::TeleopPeriodic(){
+	//use switch for buttons, read up on listeners
+}
+void RobotDemo::TestInit(){
+	
+}
+void RobotDemo::TestPeriodic(){
+	
+}

@@ -1,0 +1,45 @@
+#ifndef MYROBOT_H
+#define MYROBOT_H
+#include "WPILib.h"
+
+
+class RobotDemo : public IterativeRobot{
+	
+public:
+	
+	RobotDemo(){
+		
+	}
+	
+	~RobotDemo(){
+		delete flTalon;
+		delete frTalon;
+		delete blTalon;
+		delete brTalon;
+		delete myRobot;
+		delete stick;
+	}
+	
+	Talon *flTalon;
+	Talon *frTalon;
+	Talon *blTalon;
+	Talon *brTalon;
+	RobotDrive *wheels;
+	Joystick *stick;
+	void RobotInit();
+	void DisabledInit();
+	void DisabledPeriodic();
+	void AutonomousInit();
+	void AutonomousPeriodic();
+	void TeleopInit();
+	void TeleopPeriodic(); //use switch for buttons, read up on listeners
+	void TestInit();
+	void TestPeriodic();
+	
+private:
+protected:
+};
+
+START_ROBOT_CLASS(RobotDemo);
+
+#endif

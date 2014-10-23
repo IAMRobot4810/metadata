@@ -1,0 +1,11 @@
+#include "MyRobot.h"
+
+void RobotDemo::RobotInit();
+void DisabledInit();
+void DisabledPeriodic();
+void AutonomousInit();
+void AutonomousPeriodic();
+void TeleopInit();
+void TeleopPeriodic(); //use switch for buttons, read up on listeners
+void TestInit();
+void TestPeriodic();

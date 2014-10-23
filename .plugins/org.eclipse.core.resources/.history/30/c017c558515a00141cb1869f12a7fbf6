@@ -1,0 +1,41 @@
+#include "WPILib.h"
+
+
+class RobotDemo : public IterativeRobot{
+	
+public:
+	
+	RobotDemo(){
+		
+	}
+	
+	~RobotDemo(){
+		delete flTalon;
+		delete frTalon;
+		delete blTalon;
+		delete brTalon;
+		delete myRobot;
+		delete stick;
+	}
+	
+	Talon *flTalon;
+	Talon *frTalon;
+	Talon *blTalon;
+	Talon *brTalon;
+	RobotDrive *myRobot;
+	Joystick *stick;
+	void RobotDemo::RobotInit();
+	void RobotDemo::DisabledInit();
+	void RobotDemo::DisabledPeriodic();
+	void RobotDemo::AutonomousInit();
+	void RobotDemo::AutonomousPeriodic();
+	void RobotDemo::TeleopInit();
+	void RobotDemo::TeleopPeriodic();
+	void RobotDemo::TestInit();
+	void RobotDemo::TestPeriodic();
+	
+private:
+protected:
+};
+
+START_ROBOT_CLASS(RobotDemo);
